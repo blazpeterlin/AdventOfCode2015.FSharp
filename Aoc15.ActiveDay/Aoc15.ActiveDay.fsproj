@@ -6,7 +6,16 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="inputs\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
     <Compile Include="Program.fs" />
+  </ItemGroup>
+
+  <ItemGroup />
+
+  <ItemGroup>
+    <ProjectReference Include="..\Aoc15.Common\Aoc15.Common.fsproj" />
   </ItemGroup>
 
 </Project>

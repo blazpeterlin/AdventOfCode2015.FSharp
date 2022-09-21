@@ -22,7 +22,7 @@ module Input =
             | "", [] -> []
             | _ -> head :: skippedTail
 
-    let env2f env = env |> function | T -> "t.txt" | P -> "p.txt"
+    //let env2f env = env |> function | T -> "t.txt" | P -> "p.txt"
     let f2text fpath = fpath |> File.ReadAllText
     let f2lines fpath = fpath |> File.ReadAllLines |> List.ofSeq |> skipLastEmpty
     let text2tokens (splitCh:string) (text:string) = text.Split(splitCh.ToCharArray()) |> List.ofArray
