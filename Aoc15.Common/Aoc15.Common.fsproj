@@ -9,4 +9,8 @@
     <Compile Include="Common.fs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="TextCopy" Version="6.1.0" />
+  </ItemGroup>
+
 </Project>

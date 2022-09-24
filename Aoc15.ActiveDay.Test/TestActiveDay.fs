@@ -8,24 +8,17 @@ open System
 [<SetUp>]
 let Setup () =
     ()
+    
+[<TestCase("input-TEST.txt")>] 
+let Test1 (fn : string) = 
+    let input = fn |> f2text
+    let sln1 = solve1 input
+    Console.WriteLine(sln1)
+    Assert.Pass(sln1.ToString())
 
-let Execute (solve:string->string) file =
-     let solved = file |> f2text |> solve
-
-     Console.WriteLine(solved)
-     Assert.Pass()
-
-let Execute1 file = Execute solve1 file
-let Execute2 file = Execute solve2 file
-
-[<Test>] 
-let Test1 () = Execute1 "inputs\\input.txt"
-
-[<Test>] 
-let Run1 () = Execute1 "inputs\\input-test.txt"
-
-[<Test>] 
-let Test2 () = Execute2 "inputs\\input.txt"
-
-[<Test>] 
-let Run2 () = Execute2 "inputs\\input-test.txt"
+[<TestCase("input-TEST.txt")>] 
+let Test2 (fn : string) = 
+    let input = fn |> f2text
+    let sln2 = solve2 input
+    Console.WriteLine(sln2)
+    Assert.Pass(sln2.ToString())

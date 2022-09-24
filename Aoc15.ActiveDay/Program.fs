@@ -2,11 +2,19 @@
 
 open Aoc15
 open Input
+open TextCopy
 
-let solve1 text = text + "_abc"
-let solve2 text = text + "_bcd"
+let input =  "input.txt" |> f2text
 
-let res1 = "inputs\input.txt" |> f2text |> solve1
+let solve1 (text:string) = 
+    0
+let solve2 (text:string) =
+    0
 
-let finished = "a" + res1.ToString()
+let res1 = input |> solve1
+let res2 = input |> solve2
+
+ClipboardService.SetText(res1.ToString())
+
+let finished = true
 ()

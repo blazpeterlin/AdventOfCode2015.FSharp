@@ -8,10 +8,16 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Content Include="input-TEST.txt">
+    <Content Include="D01\T01-example2.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <Compile Include="TestActiveDay.fs" />
+    <Content Include="D01\T01-example1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="D01\T01-input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="D01\T01.fs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -23,8 +29,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Aoc15.ActiveDay\Aoc15.ActiveDay.fsproj" />
     <ProjectReference Include="..\Aoc15.Common\Aoc15.Common.fsproj" />
+    <ProjectReference Include="..\Aoc15.FinishedDays\Aoc15.FinishedDays.fsproj" />
   </ItemGroup>
 
 </Project>
