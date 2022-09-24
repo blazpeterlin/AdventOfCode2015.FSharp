@@ -9,8 +9,8 @@ let input =  "input.txt" |> f2text
 let parseLine ln =
     ln
     |> text2tokens "x"
-    |> List.map int
-    |> fun (x::y::z::[]) -> (x,y,z)
+    //|> List.map int
+    //|> fun (x::y::z::[]) -> (x,y,z)
 
 let parse2lines strs = 
     strs 
@@ -26,7 +26,7 @@ let solve2 (text:string) =
 let res1 = input |> solve1
 let res2 = input |> solve2
 
-ClipboardService.SetText(res2.ToString())
+ClipboardService.SetText(res1.ToString())
 
 let finished = true
 ()
