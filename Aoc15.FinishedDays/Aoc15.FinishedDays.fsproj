@@ -6,6 +6,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Include="D02.fs" />
     <Compile Include="D01.fs" />
   </ItemGroup>
 
