@@ -6,14 +6,14 @@ open TextCopy
 
 let input =  "input.txt" |> f2text
 
-let parseLine ln =
+let parseLine (ln:string) =
     ln
     |> text2tokens "x"
     //|> List.map int
     //|> fun (x::y::z::[]) -> (x,y,z)
 
-let parse2lines strs = 
-    strs 
+let parse2lines (text:string) = 
+    text
     |> text2lines 
     |> List.map parseLine
 
