@@ -15,6 +15,12 @@ module Operators =
     let inline filter predicate list = List.filter predicate list
     let inline sum list = List.sum list
     let inline ofArray arr = List.ofArray arr
+    let inline ofSeq sq = List.ofSeq sq
+    let inline distinct list = List.distinct list
+    let inline length list = List.length list
+    let inline windowed windowSize list = List.windowed windowSize list
+    let inline fold (folder:'State -> 'T -> 'State) (state: 'State) (list: 'T list) = List.fold folder state list
+    let inline head list = List.head list
 
 module Input =
     let rec private skipLastEmpty (lst:string list) =

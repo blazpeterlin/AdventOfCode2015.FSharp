@@ -8,6 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="D11\input-TEST.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="D11\input.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Compile Include="D11\T11.fs" />
     <Content Include="D10\input-TEST.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
