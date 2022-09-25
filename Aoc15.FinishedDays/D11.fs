@@ -26,6 +26,21 @@ let incrementSmart (pass0:string) =
         |> fst
         |> System.String
     res.Replace('i','j').Replace('l','m').Replace('o','p')
+
+let incrementSmartRec (pass0: string) = 
+    let rec inc (pass:string) : string =
+        let left = pass.Substring(0, pass.Length-1)
+        match pass[pass.Length-1] with
+        | 'z' -> 
+            let next = inc left
+            next + "a"
+        | ch -> 
+            let right = (ch |> int |> (+)1 |> char)
+            left + right.ToString()
+
+    let res = pass0 |> inc
+    res.Replace('i','j').Replace('l','m').Replace('o','p')
+
         
 let acceptPass (pass: string) =
    
@@ -52,7 +67,7 @@ let parse2lines (text:string) =
 let solve1 (text:string) = 
     let pass0 = text |> parse2lines
     pass0 
-    |> Seq.unfold (fun st -> incrementSmart st |> fun s -> Some(s,s))
+    |> Seq.unfold (fun st -> incrementSmartRec st |> fun s -> Some(s,s))
     |> Seq.find (fun pass -> acceptPass pass)
     
     
@@ -61,7 +76,7 @@ let solve1 (text:string) =
 let solve2 (text:string) =
     let pass0 = text |> parse2lines
     pass0 
-    |> Seq.unfold (fun st -> incrementSmart st |> fun s -> Some(s,s))
+    |> Seq.unfold (fun st -> incrementSmartRec st |> fun s -> Some(s,s))
     |> Seq.filter (fun pass -> acceptPass pass)
     |> Seq.skip 1
     |> Seq.head

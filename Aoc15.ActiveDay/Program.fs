@@ -10,7 +10,7 @@ let input =  "input.txt" |> f2text
 
 let parseLine (ln:string) =
     ln
-    |> text2tokens "x"
+    // |> text2tokens "x"
     // |> text2tokensStr ["abc";"def"]
 
 let parse2lines (text:string) = 
