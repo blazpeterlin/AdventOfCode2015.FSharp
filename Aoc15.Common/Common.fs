@@ -14,6 +14,7 @@ module Operators =
     let inline map mapping list = List.map mapping list
     let inline filter predicate list = List.filter predicate list
     let inline sum list = List.sum list
+    let inline ofArray arr = List.ofArray arr
 
 module Input =
     let rec private skipLastEmpty (lst:string list) =

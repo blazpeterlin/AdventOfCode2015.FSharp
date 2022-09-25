@@ -4,7 +4,7 @@ open Aoc15
 open Input
 open TextCopy
 open System.Collections.Generic
-open Operators
+open Aoc15.Operators
 
 let input =  "input.txt" |> f2text
 
