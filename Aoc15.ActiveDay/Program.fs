@@ -3,14 +3,15 @@
 open Aoc15
 open Input
 open TextCopy
+open System.Collections.Generic
+open Operators
 
 let input =  "input.txt" |> f2text
 
 let parseLine (ln:string) =
     ln
     |> text2tokens "x"
-    //|> List.map int
-    //|> fun (x::y::z::[]) -> (x,y,z)
+    // |> text2tokensStr ["abc";"def"]
 
 let parse2lines (text:string) = 
     text
