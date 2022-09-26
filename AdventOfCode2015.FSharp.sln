@@ -7,15 +7,13 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Common", "Common", "{4847B2
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Aoc15.Common", "Aoc15.Common\Aoc15.Common.fsproj", "{BC070C69-6329-48CB-A694-E8A100CA4311}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Puzzles-01-08", "Puzzles-01-08", "{765BE398-A2D0-4E22-84E2-86BB3A626456}"
-EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Aoc15.FinishedDays", "Aoc15.FinishedDays\Aoc15.FinishedDays.fsproj", "{CB94E26C-E174-4F33-A81F-368880B3E105}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Aoc15.FinishedDays", "Aoc15.FinishedDays\Aoc15.FinishedDays.fsproj", "{CB94E26C-E174-4F33-A81F-368880B3E105}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Aoc15.ActiveDay", "Aoc15.ActiveDay\Aoc15.ActiveDay.fsproj", "{A488A26F-A4E6-4B03-A275-DF0B75E55581}"
 EndProject
 Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Aoc15.ActiveDay.Test", "Aoc15.ActiveDay.Test\Aoc15.ActiveDay.Test.fsproj", "{8522577C-F87C-496A-882B-ED377EB317D0}"
 EndProject
-Project("{F2A71F9B-5D33-465A-A702-920D77279786}") = "Aoc15.FinishedDays.Test", "Aoc15.FinishedDays.Test\Aoc15.FinishedDays.Test.fsproj", "{A47A5AB0-1E02-4662-A242-664ABF694289}"
+Project("{6EC3EE1D-3C4E-46DD-8F32-0CC8E7565705}") = "Aoc15.FinishedDays.Test", "Aoc15.FinishedDays.Test\Aoc15.FinishedDays.Test.fsproj", "{A47A5AB0-1E02-4662-A242-664ABF694289}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
