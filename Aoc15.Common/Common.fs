@@ -37,7 +37,7 @@ module Input =
     //let env2f env = env |> function | T -> "t.txt" | P -> "p.txt"
     let f2text fpath = fpath |> File.ReadAllText
     let f2lines fpath = fpath |> File.ReadAllLines |> List.ofSeq |> skipLastEmpty
-    let text2tokens (splitCh:string) (text:string) = text.Split(splitCh.ToCharArray()) |> List.ofArray
+    let text2tokens (splitCh:string) (text:string) = text.Split(splitCh.ToCharArray(), System.StringSplitOptions.RemoveEmptyEntries) |> List.ofArray
     let text2tokensStr (splitStrs:string list) (text:string) = text.Split(splitStrs |> Array.ofSeq, System.StringSplitOptions.RemoveEmptyEntries) |> List.ofArray
     let text2lines (text:string) = text.Split("\r\n") |> List.ofArray |> skipLastEmpty
     let f2tokens splitCh fpath = fpath |> f2text |> text2tokens splitCh
@@ -45,6 +45,9 @@ module Input =
 
 module Common =
     let manhattan (x0,y0) (x1,y1) = abs(x1-x0)+abs(y1-y0)
+
+    let groupByKeyVal (projKey:'T->'Key) (projVal:'T->'Val) (lst:'T list) : ('Key * 'Val list) list =
+        lst |> List.groupBy projKey |> List.map (fun (x,lst) -> x,lst |> List.map projVal)
 
     [<System.Diagnostics.DebuggerStepThrough>]
     let rec unfold f state = 
